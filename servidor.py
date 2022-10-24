@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonfify, render_template
+from flask import Flask, request, jsonify, render_template
 
 
 # Generar servidor (Back-end)
