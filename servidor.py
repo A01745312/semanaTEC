@@ -41,7 +41,12 @@ def modeloForm ():
     # Utilizar el modelo
     resultado = dt.predict(datosEntrada.reshape(1, -1))
 
+<<<<<<< HEAD
     return jsonify({"Resultado": "datos recibidos"})
+=======
+
+    return jsonify({"Resultado": str(resultado[0])})
+>>>>>>> parent of 55b4f17 (pruebaRes)
 
 # *****  modeloFile  *****
 
