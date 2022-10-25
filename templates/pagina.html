@@ -13,19 +13,33 @@
         <form method="post" action="/modeloIA">
             <div class="mb-3">
                 <label for="pH" class="form-label">pH</label>
-                <input type="text" class="form-control" name="pH" id="pH" required>
+                <input type="text" class="form-control" name="pH" id="pH">
             </div>
             <div class="mb-3">
-                <label for="sulfatos" class="form-label">sulfatos</label>
+                <label for="sulfatos" class="form-label">Sulfatos</label>
                 <input type="text" class="form-control" name="sulfatos" id="sulfatos">
             </div>
             <div class="mb-3">
-                <label for="alcohol" class="form-label">alcohol</label>
+                <label for="alcohol" class="form-label">Alcohol</label>
                 <input type="text" class="form-control" name="alcohol" id="alcohol">
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
     </div>
+
+    <!---->
+
+    <div class="container">
+        <h1>Form 2</h1>
+        <form action="/modeloFile" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="file" class="form-label">Archivo</label>
+                <input type="file" class="form-control" name="file" id="file">
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
