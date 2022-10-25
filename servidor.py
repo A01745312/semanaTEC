@@ -40,8 +40,6 @@ def modeloForm ():
 
     # Utilizar el modelo
     resultado = dt.predict(datosEntrada.reshape(1, -1))
-
-
     return jsonify({"Resultado": str(resultado[0])})
 
 # *****  modeloFile  *****
