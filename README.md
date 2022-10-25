@@ -1,1 +1,4 @@
-# semanaTEC Conectando el Mundo Web
+# SemanaTEC 
+# "Conectando el Mundo Web"
+# Profesor: Victor Sosa
+
