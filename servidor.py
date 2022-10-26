@@ -52,12 +52,21 @@ def modeloFile ():
     # Procesar datos de entrada
     f = request.files['file']
     filename = secure_filename(f.filename)
-    path = os.path.join(os.getcwd(), filename)
+    if not os.path.exists('files'):
+        os.makedirs('files')
+    path = os.path.join(os.getcwd(), 'files',filename)
     f.save(path)
     file = open(path,'r')
+    datosEntrada = []
     for line in file:
         print(line)
-    return jsonify({"Resultado": "datos recibidos"})
+        values = line.split(',')
+        for i in values:
+            if i != "\n":
+                datosEntrada.append(int(i))
+    datosEntrada = np.array(datosEntrada)
+    resultado = dt.predict(datosEntrada.reshape(1,-1))
+    return jsonify({"Resultado": str(resultado[0])})
 
 # *****  modelo  *****
 
